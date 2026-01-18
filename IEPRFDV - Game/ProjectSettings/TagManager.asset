@@ -2,8 +2,10 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Enemy
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -38,6 +40,26 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: WalkableArea
+    uniqueID: 4088078707
+    locked: 0
+  - name: BG
+    uniqueID: 3403898647
+    locked: 0
+  - name: Walls
+    uniqueID: 2994253029
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Entities
+    uniqueID: 1088003273
+    locked: 0
+  - name: PickUp
+    uniqueID: 2314147475
+    locked: 0
+  - name: Player
+    uniqueID: 2839099909
+    locked: 0
+  m_RenderingLayers:
+  - Default
