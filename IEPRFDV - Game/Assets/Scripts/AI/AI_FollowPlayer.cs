@@ -1,15 +1,19 @@
+using NaughtyAttributes;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class AI_FollowPlayer : MonoBehaviour
 {
+
     [Header("References")]
     [SerializeField] public Transform target;
 
     [Header("Movement")]
     [SerializeField] private float moveSpeed = 0.8f;
     //[SerializeField] private bool randomMovement = false;
-    //[SerializeField] private float randomDistUntil = 5.0f;
+    [SerializeField] private bool hasLimitedVisibility = false;
+    [ShowIf("hasLimitedVisibility")][SerializeField] private float detectionRadius = 5.0f;
+    //[ShowIf("randomMovement")][SerializeField] private float randomMovementRange = 5.0f;
 
 
     [Header("Attack")]
@@ -20,6 +24,7 @@ public class AI_FollowPlayer : MonoBehaviour
     private Vector3 positionOffset;
     private NavMeshAgent navAgent;
     //private Animator animator;
+    //private float detectionBuffer = 1.0f;
     private float targetDistance;
 
     void Start()
@@ -29,33 +34,58 @@ public class AI_FollowPlayer : MonoBehaviour
 
         navAgent.updateRotation = false;
         navAgent.updateUpAxis = false;
-
         navAgent.speed = moveSpeed;
+
+
+        //if (attackDistance < detectionRadius)
+        //{
+        //    detectionRadius = attackDistance + 3.0f;
+        //}
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        //transform.position = player.transform.position + positionOffset;
         targetDistance = Vector3.Distance(navAgent.transform.position, target.position);
-        if (targetDistance < attackDistance)
+
+        if (!hasLimitedVisibility)
         {
-            //if (stopOnAttack)
-            //{
-            //    navAgent.isStopped = true;
-            //    animator.SetBool("Attack, true");
-            //}
-        }
-        else
-        {
-            //if (stopOnAttack)
-            //{
-            //    navAgent.isStopped = false;
-            //    animator.SetBool("Attack, false");
-            //}
             navAgent.SetDestination(target.position);
-            
         }
+        else if (targetDistance <= detectionRadius)
+        {
+            if (targetDistance <= attackDistance)
+            {
+                //if (stopOnAttack)
+                //{
+                //    navAgent.isStopped = true;
+                //    animator.SetBool("Attack", true);
+                //}
+            }
+            else
+            {
+                //if (stopOnAttack)
+                //{
+                //    navAgent.isStopped = false;
+                //    animator.SetBool("Attack", false);
+                //}
+                navAgent.SetDestination(target.position);
+            }   
+        }
+        //else if (randomMovementRange && targetDistance > detectionRadius + detectionBuffer)
+        //{
+        //    //Prevents auto braking from stopping random movement
+        //    if (navAgent.remainingDistance > navAgent.stoppingDistance)
+        //    {
+                
+        //    }
+        //    else
+        //    {
+        //        Vector2 randomOffset = Random.insideUnitCircle * randomMovementRange;
+        //        Vector3 randomDest = navAgent.transform.position + new Vector3(randomOffset.x, randomOffset.y, 0f);
+        //        navAgent.SetDestination(randomDest);
+        //    }
+        //}
     }
 
     //private void OnAnimatorMove()
@@ -67,24 +97,4 @@ public class AI_FollowPlayer : MonoBehaviour
     //}
 }
 
-/*
- public class RandomWalk : MonoBehaviour
-    {
-        public float m_Range = 25.0f;
-        NavMeshAgent m_Agent;
-
-        void Start()
-        {
-            m_Agent = GetComponent<NavMeshAgent>();
-        }
-
-        void Update()
-        {
-            if (m_Agent.pathPending || !m_Agent.isOnNavMesh || m_Agent.remainingDistance > 0.1f)
-                return;
-
-            m_Agent.destination = m_Range * Random.insideUnitCircle;
-        }
-    }
- */
 

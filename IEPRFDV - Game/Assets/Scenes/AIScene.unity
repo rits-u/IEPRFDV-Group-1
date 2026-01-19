@@ -181,7 +181,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10
+  orthographic size: 20
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -559,11 +559,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3172665908765356769, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15
+      value: -21.5
       objectReference: {fileID: 0}
     - target: {fileID: 3172665908765356769, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3172665908765356769, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -597,10 +597,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3473504130444254772, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
+      propertyPath: m_AgentTypeID
+      value: -1372625422
+      objectReference: {fileID: 0}
     - target: {fileID: 4258615396906989230, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 468227072}
+    - target: {fileID: 4258615396906989230, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
+      propertyPath: movementRange
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258615396906989230, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
+      propertyPath: attackDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258615396906989230, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
+      propertyPath: randomMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258615396906989230, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
+      propertyPath: detectionRadius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7727712613359759040, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
       propertyPath: m_Name
       value: TempBot
@@ -675,6 +695,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1383324301621173748, guid: ae6f52400ed815f42a3a7d53cd1e97a7, type: 3}
+      propertyPath: m_VoxelSize
+      value: 0.06666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383324301621173748, guid: ae6f52400ed815f42a3a7d53cd1e97a7, type: 3}
+      propertyPath: m_AgentTypeID
+      value: -1372625422
+      objectReference: {fileID: 0}
     - target: {fileID: 1383324301621173748, guid: ae6f52400ed815f42a3a7d53cd1e97a7, type: 3}
       propertyPath: m_NavMeshData
       value: 
