@@ -597,32 +597,39 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3473504130444254772, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
+      propertyPath: m_AgentTypeID
+      value: -1372625422
+      objectReference: {fileID: 0}
     - target: {fileID: 4258615396906989230, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 468227072}
-    - target: {fileID: 6120332864679170620, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
-      propertyPath: pools.Array.data[0].parent
-      value: 
-      objectReference: {fileID: 5587718120547796786}
+    - target: {fileID: 4258615396906989230, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
+      propertyPath: movementRange
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258615396906989230, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
+      propertyPath: attackDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258615396906989230, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
+      propertyPath: randomMovement
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258615396906989230, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
+      propertyPath: detectionRadius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7727712613359759040, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
       propertyPath: m_Name
       value: TempBot
-      objectReference: {fileID: 0}
-    - target: {fileID: 8044434971022750645, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
-      propertyPath: projectileInterval
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
---- !u!4 &5587718120547796786 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3172665908765356769, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
-  m_PrefabInstance: {fileID: 5587718120547796779}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6966515917979327036
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -688,6 +695,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1383324301621173748, guid: ae6f52400ed815f42a3a7d53cd1e97a7, type: 3}
+      propertyPath: m_VoxelSize
+      value: 0.06666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383324301621173748, guid: ae6f52400ed815f42a3a7d53cd1e97a7, type: 3}
+      propertyPath: m_AgentTypeID
+      value: -1372625422
+      objectReference: {fileID: 0}
+    - target: {fileID: 1383324301621173748, guid: ae6f52400ed815f42a3a7d53cd1e97a7, type: 3}
+      propertyPath: m_NavMeshData
+      value: 
+      objectReference: {fileID: 23800000, guid: 139e49aebb6bbcd4f92202b01cb7af04, type: 2}
     - target: {fileID: 2354337578260554256, guid: ae6f52400ed815f42a3a7d53cd1e97a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

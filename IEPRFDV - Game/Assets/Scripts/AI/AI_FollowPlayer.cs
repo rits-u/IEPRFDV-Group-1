@@ -36,17 +36,20 @@ public class AI_FollowPlayer : MonoBehaviour
         navAgent.updateUpAxis = false;
         navAgent.speed = moveSpeed;
 
-
         //if (attackDistance < detectionRadius)
         //{
         //    detectionRadius = attackDistance + 3.0f;
         //}
+
+
+        SetRotation();
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
         targetDistance = Vector3.Distance(navAgent.transform.position, target.position);
+        SetRotation();
 
         if (!hasLimitedVisibility)
         {
@@ -70,6 +73,7 @@ public class AI_FollowPlayer : MonoBehaviour
                 //    animator.SetBool("Attack", false);
                 //}
                 navAgent.SetDestination(target.position);
+
             }   
         }
         //else if (randomMovementRange && targetDistance > detectionRadius + detectionBuffer)
@@ -88,6 +92,13 @@ public class AI_FollowPlayer : MonoBehaviour
         //}
     }
 
+    private void SetRotation()
+    {
+        Vector3 direction = target.position - navAgent.transform.position;
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        angle -= 90f;
+        navAgent.transform.rotation = Quaternion.Euler(0, 0, angle);
+    }
     //private void OnAnimatorMove()
     //{
     //    if (animator.GetBool("Attack") == false)
