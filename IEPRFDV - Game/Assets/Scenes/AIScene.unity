@@ -597,32 +597,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4258615396906989230, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 468227072}
-    - target: {fileID: 6120332864679170620, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
-      propertyPath: pools.Array.data[0].parent
-      value: 
-      objectReference: {fileID: 5587718120547796786}
     - target: {fileID: 7727712613359759040, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
       propertyPath: m_Name
       value: TempBot
-      objectReference: {fileID: 0}
-    - target: {fileID: 8044434971022750645, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
-      propertyPath: projectileInterval
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
---- !u!4 &5587718120547796786 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3172665908765356769, guid: c4c3a2b3df853a5499f8b495612804cf, type: 3}
-  m_PrefabInstance: {fileID: 5587718120547796779}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6966515917979327036
 PrefabInstance:
   m_ObjectHideFlags: 0
